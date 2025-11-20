@@ -30,31 +30,26 @@ public final class SimpleController implements Controller {
     }
 
     /**
-     * Set the next {@link String} to print.
-     * 
-     * @param text
-     *              {@link String} to print.
+     * {@inheritDoc}
      */
+    @Override
     public void setNextString(final String text) {
         nextString = text;
     }
 
     /**
-     * Get the next {@link String} to print with {@link #writeLine()}.
-     * 
-     * @return
-     *          The next {@link String} that will be printed by {@link #writeLine()}.
+     * {@inheritDoc}
      */
+    @Override
     public String getNextString() {
         return nextString;
     }
 
     /**
-     * Get all printed strings as a {@link LinkedList} of {@link String}s.
-     * 
-     * @return
-     *          {@link LinkedList}<{@link String}> of all printed {@link String}s.
+     * {@inheritDoc}
+     * The implementation is made using a {@link LinkedList}.
      */
+    @Override
     public List<String> getHistory() {
         return new LinkedList<>(history); // safety copy
     }
